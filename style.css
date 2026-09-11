@@ -1,0 +1,152 @@
+/* 全体のリセットと基本設定 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  background-color: #f2f4f7;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.quizContainer {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* ヘッダー */
+.quizHeader {
+  background-color: #4a6fa5;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.quizHeader h1 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.progressText {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* メイン部分 */
+.quizMain {
+  padding: 24px;
+}
+
+.questionText {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* 選択肢 */
+.choicesList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.choiceButton {
+  padding: 14px;
+  font-size: 15px;
+  text-align: left;
+  border: 2px solid #a9c2e8;
+  border-radius: 8px;
+  background-color: #eaf1fb;
+  color: #244b78;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.choiceButton:hover:not(:disabled) {
+  background-color: #d3e3f7;
+  border-color: #4a6fa5;
+}
+
+.choiceButton:disabled {
+  cursor: not-allowed;
+}
+
+.choiceButton.correctChoice {
+  background-color: #e3f6e8;
+  border-color: #3fae5a;
+  color: #2a7a40;
+  font-weight: bold;
+}
+
+.choiceButton.incorrectChoice {
+  background-color: #fbe8e8;
+  border-color: #d9534f;
+  color: #b83a36;
+  font-weight: bold;
+}
+
+/* フィードバック */
+.feedbackText {
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  min-height: 24px;
+}
+
+.feedbackText.correctFeedback {
+  color: #2a7a40;
+}
+
+.feedbackText.incorrectFeedback {
+  color: #b83a36;
+}
+
+/* ボタン共通 */
+.nextButton,
+.retryButton {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4a6fa5;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nextButton:hover,
+.retryButton:hover {
+  background-color: #3a5985;
+}
+
+/* 結果画面 */
+.resultScreen {
+  text-align: center;
+}
+
+.resultScreen h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.scoreText {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
