@@ -3,6 +3,9 @@
 - プロジェクト名: quiz-app
 - 概要: 一般常識クイズアプリ
 
+## GitHubリポジトリ
+https://github.com/Atsushi-Miyagawa/quiz-app
+
 ## 技術スタック
 - HTML / CSS / JavaScript
 
